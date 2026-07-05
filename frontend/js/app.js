@@ -50,7 +50,7 @@ function appendMessage(role /* "user" | "assistant" | "system" */, text, citatio
 
   if (role === "assistant") {
     const body = document.createElement("div");
-    body.innerHTML = marked.parse(text);
+    body.innerHTML = DOMPurify.sanitize(marked.parse(text));
     div.appendChild(body);
     if (citations.length) div.appendChild(buildSources(citations));
   } else {
