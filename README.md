@@ -1,5 +1,7 @@
 # Production-Grade RAG App
 
+[![CI](https://github.com/jasalazar/production-grade-rag-app/actions/workflows/ci.yml/badge.svg)](https://github.com/jasalazar/production-grade-rag-app/actions/workflows/ci.yml)
+
 A domain-agnostic, production-oriented Retrieval-Augmented Generation (RAG) engine built on LangChain and FastAPI. It ingests a documentation corpus, retrieves the most relevant passages with a **hybrid + reranked** pipeline, and answers questions with an LLM — returning **source citations** with every answer.
 
 The engine is deliberately **corpus-neutral**: nothing about any specific dataset lives in the application code. A corpus is supplied at runtime — a URL to crawl, or files uploaded through the UI — so the same engine serves any documentation set.
@@ -103,6 +105,8 @@ Then open http://127.0.0.1:8001/ — ask questions in the chat panel, or add doc
 ```
 pytest -v
 ```
+
+Tests run automatically in CI (GitHub Actions) on every push and pull request — see `.github/workflows/ci.yml`.
 
 ## Evaluation
 
