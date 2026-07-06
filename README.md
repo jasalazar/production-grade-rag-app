@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/jasalazar/production-grade-rag-app/actions/workflows/ci.yml/badge.svg)](https://github.com/jasalazar/production-grade-rag-app/actions/workflows/ci.yml)
 
+![WMS Wiki demo — asking a question and getting a cited answer](assets/demo.gif)
+
 A domain-agnostic, production-oriented Retrieval-Augmented Generation (RAG) engine built on LangChain and FastAPI. It ingests a documentation corpus, retrieves the most relevant passages with a **hybrid + reranked** pipeline, and answers questions with an LLM — returning **source citations** with every answer.
 
 The engine is deliberately **corpus-neutral**: nothing about any specific dataset lives in the application code. A corpus is supplied at runtime — a URL to crawl, or files uploaded through the UI — so the same engine serves any documentation set.
